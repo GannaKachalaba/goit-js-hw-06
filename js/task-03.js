@@ -14,12 +14,16 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-console.log(gallery);
+
 const imageElem = images
   .map((image) => {
-    return `<li class="gallery__item"><img class="gallery__img" src="${image.url}" alt="${image.alt}"/>`;
+    return `<li class="gallery__item"><img class="gallery__img" src="${image.url}" alt="${image.alt}" width = "500"/></li>`;
   })
   .join("");
+ 
+
 console.log(imageElem);
 gallery.insertAdjacentHTML('afterend', imageElem);
 
+
+  

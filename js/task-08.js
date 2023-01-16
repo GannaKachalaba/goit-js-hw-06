@@ -5,14 +5,17 @@ form.addEventListener("submit", onFormSubmit);
 function onFormSubmit(event) {
   event.preventDefault();
   const {
-    elements: { email, password },
+    elements: { email, password }
   } = event.currentTarget;
 
-    if (email.value === "" || password.value === "") {
-        const massage = 'Всі поля повинні бути заповнені!!!!!';
+  if (email.value === "" || password.value === ""){
+    const massage = 'Всі поля повинні бути заповнені!!!!!';
     return alert(massage);
-    };
+  };
 
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
-  event.currentTarget.reset();
+console.log({ 'email': email.value, 'password': password.value }); 
+  
+  e.currentTarget.reset();
+  
 };
+
